@@ -1,12 +1,15 @@
 package task2;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.*;
 
 public class Student implements Serializable {
     private String name;
     private int age;
-    private double gpa;
     //transient double GPA;
+    @JsonIgnore
+    transient double gpa;
 
     public Student() {
     }
